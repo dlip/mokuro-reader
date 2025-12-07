@@ -304,9 +304,9 @@
     ondblclick={(e) => onDoubleTap(e, lines)}
     {contenteditable}
   >
-    {#each lines as line}
-      <p>{line}</p>
-    {/each}
+    <span
+      >{#each lines as line, i}{line}{#if i < lines.length - 1}<br />{/if}{/each}</span
+    >
   </div>
 {/each}
 
@@ -336,12 +336,11 @@
     border: 1px solid rgba(0, 0, 0, 0);
   }
 
-  .textBox p {
+  .textBox span {
     visibility: hidden;
     /* Word wrapping controlled dynamically by JavaScript */
     letter-spacing: 0.1em;
     line-height: 1.1em;
-    margin: 0;
     background-color: rgb(255, 255, 255);
     font-weight: var(--bold);
     font-family: 'Noto Sans JP', sans-serif;
@@ -354,8 +353,8 @@
     text-size-adjust: 100%;
   }
 
-  .textBox:focus p,
-  .textBox:hover p {
+  .textBox:focus span,
+  .textBox:hover span {
     visibility: visible;
   }
 
@@ -365,7 +364,7 @@
     white-space: nowrap;
   }
 
-  .textBox.originalMode p {
+  .textBox.originalMode span {
     white-space: nowrap;
   }
 </style>
