@@ -29,7 +29,7 @@
           # Directory containing package.json & next.config.js
           src = ./.;
 
-          npmDepsHash = "sha256-aHXSjnR8kR1vIPCveAsIQdWRLdglAZrAqtXpK+BJRWA=";
+          npmDepsHash = "sha256-CoO3pqAWuZzY6poqTOcs2ifP6nw2uSEOhnLiLmZlbX8=";
           # after first build, replace with the real hash from error message
 
           buildPhase = ''
