@@ -17,3 +17,5 @@ vite.config.ts.timestamp-*
 *.swp
 *.swo
 *~
+/.direnv
+/result
